@@ -33,8 +33,8 @@
 //----------------------------------------------------------------------------\\
 DAMAGE_MINIGUN <- 125;		//the actual trigger would damage 125	(minigun > ticks really fast, 	0.07s cooldown)
 DAMAGE_BEAM <- 375;			//the actual trigger would damage 375	(laser > ticks at each fire, 	1.00s cooldown)
-DAMAGE_EXPLOSION <- 2500;	//the actual trigger would damage 500	(explosion > from rocket,		7.50s cooldown)
-DAMAGE_ROCKET <- 5000;		//the actual trigger would damage 1000	(rocket direct hit,				7.50s cooldown)
+DAMAGE_EXPLOSION <- 1000;	//the actual trigger would damage 500	(explosion > from rocket,		7.50s cooldown)
+DAMAGE_ROCKET <- 2000;		//the actual trigger would damage 1000	(rocket direct hit,				7.50s cooldown)
 //============================================================================\\
 ticking <- false;
 lastrocket <- null;
