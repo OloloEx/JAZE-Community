@@ -245,32 +245,3 @@ function CheckItemFilter()
 	}
 	//printl("ITEM-CHECK: " + caller + "    |     "+activator);
 }
-
-//--------------------------------------------------------------------------------------------------------
-// Waffel edit
-//--------------------------------------------------------------------------------------------------------
-
-TIMER <- 0.00;
-TimerTick <- true;
-
-function TimeOnMap()
-{
-    if(TimerTick)
-    {
-        local sec1 = ((TIMER % 60) % 10);
-        local sec2 = ((TIMER % 60) / 10);
-        local min1 = (((TIMER/60) % 60) % 10);
-        local min2 = (((TIMER/60) % 60) / 10);
-        local h = TIMER/60/60;
-        for(local au = 1; au < 2; au++)
-        {
-            if(au == 1)
-            {
-                EntFire("Santa_Time", "SetText", "SANTA TIME: "+h.tointeger()+":"+min2.tointeger()+""+min1.tointeger()+":"+sec2.tointeger()+""+sec1.tointeger(), 0.00, null);
-				TIMER++;
-            }
-        }
-        EntFireByHandle(self,"RunScriptCode","TimeOnMap();",1.00,null,null);
-        EntFire("Santa_Time", "Display", "", 1.00, null);
-    }
-}
